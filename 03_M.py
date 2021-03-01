@@ -8,7 +8,7 @@ df = pd.read_csv('C:/Users/fatkh/OneDrive/3 course 2 term/Natural Language Proce
 nlp = spacy.load('en_core_web_sm')
 df['tokens'] = df['review'].apply(lambda doc: [token.text for token in nlp(doc) if token.text not in punctuation])
 
-X = df['tokens']
+x = df['tokens']
 y = df['sentiment']
 
 def dictionary(file_path='C:/Users/fatkh/OneDrive/3 course 2 term/Natural Language Processing/assignmnet 3/2000.tsv'):
